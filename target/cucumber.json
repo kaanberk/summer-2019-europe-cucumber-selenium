@@ -1,0 +1,345 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 10362262600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "LoginStepDefs.the_user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-01-26T19:16:11.292Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1837700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 9,
+        "name": "Login as a driver",
+        "description": "",
+        "id": "users-should-be-able-to-login;login-as-a-driver",
+        "after": [
+          {
+            "result": {
+              "duration": 862340600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4645358500,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user enter the driver information",
+            "match": {
+              "location": "LoginStepDefs.the_user_enter_the_driver_information()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2014197200,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user should be able to login",
+            "match": {
+              "location": "LoginStepDefs.the_user_should_be_able_to_login()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login"
+          },
+          {
+            "name": "@smoke"
+          },
+          {
+            "name": "@driver"
+          },
+          {
+            "name": "@VYT-123"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 7196602400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "LoginStepDefs.the_user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-01-26T19:16:29.193Z",
+        "before": [
+          {
+            "result": {
+              "duration": 268600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setUpDatabase()"
+            }
+          },
+          {
+            "result": {
+              "duration": 144700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 14,
+        "name": "Login as a sales manager",
+        "description": "",
+        "id": "users-should-be-able-to-login;login-as-a-sales-manager",
+        "after": [
+          {
+            "result": {
+              "duration": 918029900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 115100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDownDatabase()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3767767200,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user enter the sales manager information",
+            "match": {
+              "location": "LoginStepDefs.the_user_enter_the_sales_manager_information()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2009988300,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user should be able to login",
+            "match": {
+              "location": "LoginStepDefs.the_user_should_be_able_to_login()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login"
+          },
+          {
+            "name": "@smoke"
+          },
+          {
+            "name": "@sales_manager"
+          },
+          {
+            "name": "@VYT-123"
+          },
+          {
+            "name": "@db"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 7046807400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "LoginStepDefs.the_user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-01-26T19:16:43.087Z",
+        "before": [
+          {
+            "result": {
+              "duration": 88500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setUpDatabase()"
+            }
+          },
+          {
+            "result": {
+              "duration": 29200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 19,
+        "name": "Login as a store manager",
+        "description": "",
+        "id": "users-should-be-able-to-login;login-as-a-store-manager",
+        "after": [
+          {
+            "result": {
+              "duration": 1526147000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 75800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDownDatabase()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4454903900,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the user enter the store manager information",
+            "match": {
+              "location": "LoginStepDefs.the_user_enter_the_store_manager_information()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2010510900,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "the user should be able to login",
+            "match": {
+              "location": "LoginStepDefs.the_user_should_be_able_to_login()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login"
+          },
+          {
+            "name": "@smoke"
+          },
+          {
+            "name": "@store_manager"
+          },
+          {
+            "name": "@db"
+          }
+        ]
+      }
+    ],
+    "name": "Users should be able to login",
+    "description": "",
+    "id": "users-should-be-able-to-login",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/Login.feature",
+    "tags": [
+      {
+        "name": "@login",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      },
+      {
+        "name": "@smoke",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 8
+        }
+      }
+    ]
+  }
+]

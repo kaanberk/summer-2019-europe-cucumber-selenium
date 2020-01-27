@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: Login with parameters
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 60.452 s <<< FAILURE! - in Login with parameters
+Login as a sales manager](Login with parameters)  Time elapsed: 13.165 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[Dashboard]> but was:<[Login]>
+
