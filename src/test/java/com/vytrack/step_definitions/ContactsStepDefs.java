@@ -1,14 +1,19 @@
 package com.vytrack.step_definitions;
 
+import com.vytrack.pages.ContactInfoPage;
+import com.vytrack.pages.ContactsPage;
 import com.vytrack.pages.DashboardPage;
 import com.vytrack.pages.LoginPage;
 import com.vytrack.utilities.BrowserUtils;
+import com.vytrack.utilities.DBUtils;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 import java.util.List;
 import java.util.Map;
+
+import static org.junit.Assert.assertEquals;
 
 public class ContactsStepDefs {
 
@@ -23,7 +28,7 @@ public class ContactsStepDefs {
         System.out.println(actualMenuOptions);
 
         //compare actual list from website and expected list from scenario
-        Assert.assertEquals(menuOptions,actualMenuOptions);
+        assertEquals(menuOptions,actualMenuOptions);
     }
 
     @When("the use logs in using following credentials")
@@ -37,7 +42,87 @@ public class ContactsStepDefs {
         String actualFullname = dashboardPage.getUserName();
         String expectedFullname= userData.get("firstname")+" "+userData.get("lastname");
 
-        Assert.assertEquals(expectedFullname,actualFullname);
+        assertEquals(expectedFullname,actualFullname);
     }
+
+    @When("the user click on {string} from contacts")
+    public void the_user_click_on_from_contacts(String email) {
+        BrowserUtils.waitFor(3);
+        //click the row with email
+        ContactsPage contactsPage = new ContactsPage();
+        contactsPage.getContactEmail(email).click();
+
+    }
+
+    @Then("the information should be the same with database")
+    public void the_information_should_be_the_same_with_database() {
+        //getting information from UI
+        ContactInfoPage contactInfoPage = new ContactInfoPage();
+        String actualFullName = contactInfoPage.contactFullName.getText();
+        String actualEmail = contactInfoPage.email.getText();
+        String actualPhone = contactInfoPage.phone.getText();
+
+        System.out.println("actualFullName = " + actualFullName);
+        System.out.println("actualEmail = " + actualEmail);
+        System.out.println("actualPhone = " + actualPhone);
+
+        //getting information from database
+        String query ="select concat(name_prefix, \" \", first_name, \" \", last_name) as \"full_name\",e.email,p.phone\n" +
+                "from orocrm_contact crm JOIN orocrm_contact_email e\n" +
+                "on crm.id = e.owner_id\n" +
+                "join orocrm_contact_phone p\n" +
+                "on e.owner_id = p.owner_id\n" +
+                "where e.email = 'mbrackstone9@example.com';";
+
+        Map<String, Object> rowMap = DBUtils.getRowMap(query);
+        System.out.println("rowMap = " + rowMap);
+
+
+        String expectedFullname = (String) rowMap.get("full_name");
+        String expectedEmail = (String) rowMap.get("email");
+        String expectedPhone = (String) rowMap.get("phone");
+
+        System.out.println("expectedFullname = " + expectedFullname);
+        System.out.println("expectedEmail = " + expectedEmail);
+        System.out.println("expectedPhone = " + expectedPhone);
+
+        //compare UI to Database        -- import assert as a static and use it
+        assertEquals(expectedFullname,actualFullName);
+        assertEquals(expectedEmail,actualEmail);
+        assertEquals(expectedPhone,actualPhone);
+    }
+
+    @Then("the information {string} should be the same with database")
+    public void the_information_should_be_the_same_with_database(String email) {
+        //getting information from UI-GUI-Front-End-Browser
+        ContactInfoPage contactInfoPage = new ContactInfoPage();
+        String actualFullname = contactInfoPage.contactFullName.getText();
+        String actualEmail = contactInfoPage.email.getText();
+        String actualPhone = contactInfoPage.phone.getText();
+        System.out.println("actualFullname = " + actualFullname);
+        System.out.println("actualEmail = " + actualEmail);
+        System.out.println("actualPhone = " + actualPhone);
+        //getting information from database
+        String query = "select concat(name_prefix,' ',first_name,' ',last_name) as fullname, e.email, phone\n" +
+                "from orocrm_contact crm JOIN orocrm_contact_email e\n" +
+                "on crm.id = e.owner_id\n" +
+                "join orocrm_contact_phone p\n" +
+                "on e.owner_id = p.owner_id\n" +
+                "where e.email = '"+email+"';";
+        System.out.println("query = " + query);
+        Map<String, Object> rowMap = DBUtils.getRowMap(query);
+        String expectedFullname = (String) rowMap.get("fullname");
+        String expectedEmail = (String) rowMap.get("email");
+        String expectedPhone = (String) rowMap.get("phone");
+        System.out.println("expectedFullname = " + expectedFullname);
+        System.out.println("expectedEmail = " + expectedEmail);
+        System.out.println("expectedPhone = " + expectedPhone);
+        //compare UI to Database
+        assertEquals(expectedFullname,actualFullname);
+        assertEquals(expectedEmail,actualEmail);
+        assertEquals(expectedPhone,actualPhone);
+    }
+
+
 
 }

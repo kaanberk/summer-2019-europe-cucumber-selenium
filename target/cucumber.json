@@ -1,126 +1,13 @@
 [
   {
-    "line": 2,
+    "line": 1,
     "elements": [
       {
-        "line": 5,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 10362262600,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "the user is on the login page",
-            "match": {
-              "location": "LoginStepDefs.the_user_is_on_the_login_page()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2020-01-26T19:16:11.292Z",
+        "start_timestamp": "2020-02-05T20:25:21.554Z",
         "before": [
           {
             "result": {
-              "duration": 1837700,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.setUp()"
-            }
-          }
-        ],
-        "line": 9,
-        "name": "Login as a driver",
-        "description": "",
-        "id": "users-should-be-able-to-login;login-as-a-driver",
-        "after": [
-          {
-            "result": {
-              "duration": 862340600,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.tearDown(Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 4645358500,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "the user enter the driver information",
-            "match": {
-              "location": "LoginStepDefs.the_user_enter_the_driver_information()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 2014197200,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "the user should be able to login",
-            "match": {
-              "location": "LoginStepDefs.the_user_should_be_able_to_login()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@login"
-          },
-          {
-            "name": "@smoke"
-          },
-          {
-            "name": "@driver"
-          },
-          {
-            "name": "@VYT-123"
-          }
-        ]
-      },
-      {
-        "line": 5,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 7196602400,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "the user is on the login page",
-            "match": {
-              "location": "LoginStepDefs.the_user_is_on_the_login_page()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2020-01-26T19:16:29.193Z",
-        "before": [
-          {
-            "result": {
-              "duration": 268600,
+              "duration": 1077684200,
               "status": "passed"
             },
             "match": {
@@ -129,7 +16,7 @@
           },
           {
             "result": {
-              "duration": 144700,
+              "duration": 10940055400,
               "status": "passed"
             },
             "match": {
@@ -137,14 +24,14 @@
             }
           }
         ],
-        "line": 14,
-        "name": "Login as a sales manager",
+        "line": 46,
+        "name": "Contacts test with email",
         "description": "",
-        "id": "users-should-be-able-to-login;login-as-a-sales-manager",
+        "id": "contacts-page;contacts-test-with-email",
         "after": [
           {
             "result": {
-              "duration": 918029900,
+              "duration": 1142541000,
               "status": "passed"
             },
             "match": {
@@ -153,7 +40,7 @@
           },
           {
             "result": {
-              "duration": 115100,
+              "duration": 7170500,
               "status": "passed"
             },
             "match": {
@@ -166,151 +53,78 @@
         "steps": [
           {
             "result": {
-              "duration": 3767767200,
+              "duration": 6188471600,
               "status": "passed"
             },
-            "line": 15,
-            "name": "the user enter the sales manager information",
+            "line": 47,
+            "name": "the user logged in as a \"store manager\"",
             "match": {
-              "location": "LoginStepDefs.the_user_enter_the_sales_manager_information()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 2009988300,
-              "status": "passed"
-            },
-            "line": 16,
-            "name": "the user should be able to login",
-            "match": {
-              "location": "LoginStepDefs.the_user_should_be_able_to_login()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@login"
-          },
-          {
-            "name": "@smoke"
-          },
-          {
-            "name": "@sales_manager"
-          },
-          {
-            "name": "@VYT-123"
-          },
-          {
-            "name": "@db"
-          }
-        ]
-      },
-      {
-        "line": 5,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 7046807400,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "the user is on the login page",
-            "match": {
-              "location": "LoginStepDefs.the_user_is_on_the_login_page()"
+              "arguments": [
+                {
+                  "val": "\"store manager\"",
+                  "offset": 24
+                }
+              ],
+              "location": "LoginStepDefs.the_user_logged_in_as_a(String)"
             },
             "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2020-01-26T19:16:43.087Z",
-        "before": [
-          {
-            "result": {
-              "duration": 88500,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.setUpDatabase()"
-            }
           },
           {
             "result": {
-              "duration": 29200,
+              "duration": 3929031200,
               "status": "passed"
             },
+            "line": 48,
+            "name": "the user navigates \"Customers\" \"Contacts\"",
             "match": {
-              "location": "Hooks.setUp()"
-            }
-          }
-        ],
-        "line": 19,
-        "name": "Login as a store manager",
-        "description": "",
-        "id": "users-should-be-able-to-login;login-as-a-store-manager",
-        "after": [
-          {
-            "result": {
-              "duration": 1526147000,
-              "status": "passed"
+              "arguments": [
+                {
+                  "val": "\"Customers\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"Contacts\"",
+                  "offset": 31
+                }
+              ],
+              "location": "NavigationMenuStepDefs.the_user_navigates(String,String)"
             },
-            "match": {
-              "location": "Hooks.tearDown(Scenario)"
-            }
+            "keyword": "And "
           },
           {
             "result": {
-              "duration": 75800,
+              "duration": 3732177200,
               "status": "passed"
             },
+            "line": 49,
+            "name": "the user click on \"mbrackstone9@example.com\" from contacts",
             "match": {
-              "location": "Hooks.tearDownDatabase()"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 4454903900,
-              "status": "passed"
-            },
-            "line": 20,
-            "name": "the user enter the store manager information",
-            "match": {
-              "location": "LoginStepDefs.the_user_enter_the_store_manager_information()"
+              "arguments": [
+                {
+                  "val": "\"mbrackstone9@example.com\"",
+                  "offset": 18
+                }
+              ],
+              "location": "ContactsStepDefs.the_user_click_on_from_contacts(String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 2010510900,
+              "duration": 1609038900,
               "status": "passed"
             },
-            "line": 21,
-            "name": "the user should be able to login",
+            "line": 50,
+            "name": "the information should be the same with database",
             "match": {
-              "location": "LoginStepDefs.the_user_should_be_able_to_login()"
+              "location": "ContactsStepDefs.the_information_should_be_the_same_with_database()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@login"
-          },
-          {
-            "name": "@smoke"
-          },
-          {
-            "name": "@store_manager"
+            "name": "@wip"
           },
           {
             "name": "@db"
@@ -318,28 +132,11 @@
         ]
       }
     ],
-    "name": "Users should be able to login",
+    "name": "Contacts Page",
     "description": "",
-    "id": "users-should-be-able-to-login",
+    "id": "contacts-page",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/Login.feature",
-    "tags": [
-      {
-        "name": "@login",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 1
-        }
-      },
-      {
-        "name": "@smoke",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 8
-        }
-      }
-    ]
+    "uri": "file:src/test/resources/features/Contacts.feature",
+    "tags": []
   }
 ]
