@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
         glue = "com/vytrack/step_definitions/", //we tell where the step definitions are to the runner
 //      dryRun = true,//this helps us to find only undefined steps in our scenarios where we can get the method
         dryRun = false, //--> cucumber will execute normal, meaning java will execute
-        tags = "@wip" //tags is another cucumber option. it allows us to run certain scenario(s)
+        tags = "@smoke" //tags is another cucumber option. it allows us to run certain scenario(s)
 
 
 )
